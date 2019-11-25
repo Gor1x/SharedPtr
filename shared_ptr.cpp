@@ -53,6 +53,10 @@ Matrix *SharedPtr::ptr() const {
     return storage_->getObject();
 }
 
+void SharedPtr::swapWith(SharedPtr &other) {
+    std::swap(storage_, other.storage_);
+}
+
 void SharedPtr::Storage::decrement()
 {
     ref_count_--;

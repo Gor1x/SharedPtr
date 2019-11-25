@@ -20,10 +20,7 @@ public:
 
 private:
 
-    void swapWith(SharedPtr &other)
-    {
-        std::swap(storage_, other.storage_);
-    }
+    void swapWith(SharedPtr &other);
 
     class Storage {
     public:
