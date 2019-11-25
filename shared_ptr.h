@@ -2,29 +2,36 @@
 #define SHARED_PTR_H
 
 #include "matrix.h"
+#include <algorithm>
 
 class SharedPtr {
 public:
-    SharedPtr(Matrix* obj = 0);
+    SharedPtr(Matrix* obj = nullptr);
     SharedPtr(const SharedPtr& other);
-    SharedPtr& operator=(SharedPtr other);
+    SharedPtr& operator=(const SharedPtr &other);
     ~SharedPtr();
 
     Matrix* ptr() const;
     bool isNull() const;
-    void reset(Matrix* obj = 0);
+    void reset(Matrix* obj = nullptr);
 
     Matrix* operator->() const;
     Matrix& operator*() const;
 
 private:
+
+    void swapWith(SharedPtr &other)
+    {
+        std::swap(storage_, other.storage_);
+    }
+
     class Storage {
     public:
         Storage(Matrix* mtx);
         ~Storage();
 
-        void incr();
-        void decr();
+        void increment();
+        void decrement();
 
         int getCounter() const;
         Matrix* getObject() const;

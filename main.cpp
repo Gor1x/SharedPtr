@@ -23,7 +23,7 @@ SharedPtr make_shared(int seed) {
     return SharedPtr(make_matrix(seed));
 }
 
-void test_empty() {
+void test_empty() { //passed
     SharedPtr ptr;
     assert(ptr.isNull());
     assert(ptr.ptr() == 0);
@@ -52,7 +52,7 @@ void test_operators() {
     delete ref;
 }
 
-void test_assignment() {
+void test_assignment() { //Passed
     SharedPtr p1 = make_shared(1);
     SharedPtr p2 = make_shared(2);
 
