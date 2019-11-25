@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/egor/CLionProjects/sharedPtr/matrix.h
+cstdio
+-
+cstddef
+-
+
+/home/egor/CLionProjects/sharedPtr/shared_ptr.cpp
+matrix.h
+/home/egor/CLionProjects/sharedPtr/matrix.h
+shared_ptr.h
+/home/egor/CLionProjects/sharedPtr/shared_ptr.h
+
+/home/egor/CLionProjects/sharedPtr/shared_ptr.h
+matrix.h
+/home/egor/CLionProjects/sharedPtr/matrix.h
+algorithm
+-
+
