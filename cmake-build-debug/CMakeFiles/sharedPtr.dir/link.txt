@@ -1,0 +1,1 @@
+/usr/bin/c++   -Werror -Wall -Wextra -pedantic -g   CMakeFiles/sharedPtr.dir/main.cpp.o CMakeFiles/sharedPtr.dir/matrix.cpp.o CMakeFiles/sharedPtr.dir/shared_ptr.cpp.o  -o sharedPtr 
